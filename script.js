@@ -66,5 +66,8 @@ function multiply(...operands) {
 }
 
 function divide(...operands) {
+  if (operands.includes(0)) {
+    return 'Bro, 0? Really?';
+}
   return operands.reduce((acc, val) => acc / val);
 }
